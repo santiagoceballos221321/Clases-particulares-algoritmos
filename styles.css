@@ -115,6 +115,7 @@
     text-align: center;
     margin-top: 50px;
     background-color:  #F2F2F2;
+    margin-top: 70px;
   }
   
   .titulo-seccion {
@@ -168,7 +169,33 @@
     margin-top: 30px;
   }
   
+  button {
+    padding: 0;
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 2px;
+  }
   
+  .contenedor-secciones {
+    background-color: #eee; /* color gris de fondo */
+    padding: 20px; /* espacio de relleno para separar del borde */
+  }
+  
+
+  #botonpdf{
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border:solid black 10px;
+  background-color: #fefefe;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
 
     #modalidad {
     background-color: #fff;
@@ -198,44 +225,95 @@
     margin-bottom: 10px;
     }
     
-    #precios {
-    background-color: #F2F2F2;
-    padding: 50px;
-    text-align: center;
-    }
-    
-    #precios h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    }
-    
-    #precios p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    }
-    
-    #precios ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    }
-    
-    #precios li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    }
-    
-    #precios a {
-    display: block;
-    font-size: 1.2rem;
-    margin-top: 30px;
-    }
-    
-    #precios a:hover {
-    color: #0077FF;
-    }
-    
+    /* Estilos para las tablas de precios */
+
+    /* Estilos para las tablas */
+
+    /* Estilos para las tablas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px solid #000000;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+th {
+  font-weight: bold;
+  color: #fff;
+  background-color: #f9c60f;
+  border-color: #000000;
+}
+
+.tabla-precios td:first-child {
+  font-weight: bold;
+  width: 70%;
+  border: 2px solid #000000;
+}
+
+.tabla-precios td:last-child {
+  font-weight: bold;
+  width: 30%;
+  color: #fff;
+  background-color: #f9c60f;
+  cursor: pointer;
+  border-left: 2px solid #000000;
+}
+
+.tabla-precios td:last-child:hover {
+  background-color: #f9c60f;
+}
+
+.tabla-horarios td:first-child {
+  font-weight: bold;
+  width: 30%;
+  color: #fff;
+  background-color:#f9c60f;
+  border-right: 2px solid #000000;
+}
+
+.tabla-horarios td:first-child:hover {
+  background-color: #f9c60f;
+}
+
+.tabla-horarios td:last-child {
+  font-weight: bold;
+  width: 70%;
+  border-left: 2px solid #000000;
+}
+
+#horarios h2 {
+  color: #f9c60f;
+}
+
+#precios h2 {
+  color: #fff;
+  background-color: #f9c60f;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #ddd;
+}
+
+
+#horarios h2 {
+  color: white;
+}
+
+#precios h2 {
+  color: #fff;
+  background-color: #f9c60f;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
     footer {
         background-color: #000000;
         color: #fff;
