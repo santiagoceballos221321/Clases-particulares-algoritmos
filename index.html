@@ -163,15 +163,18 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Formulario de contacto</h2>
-      <form>
-        <label for="name">Nombre:</label>
-        <input placeholder="Carla Bustamante" type="text" id="name" name="name">
+      <form action="enviar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+      
         <label for="email">Email:</label>
-        <input placeholder="carlabustamante98@gmail.com" type="email" id="email" name="email">
-        <label for="message">Mensaje:</label>
-        <textarea placeholder="¡Hola! Me gustaría reservar una clase particular para algoritmos. ¿Tienes disponibilidad para la próxima semana? Gracias." id="message" name="message"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+        <input type="email" id="email" name="email">
+      
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+      
+        <input type="submit" value="Enviar">
+      </form>      
     </div>
   </div>
 
