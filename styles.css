@@ -176,31 +176,68 @@
     font-family: inherit;
     cursor: pointer;
     border-radius: 2px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #020202;
+    border:solid black 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button {
+    padding: 0;
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #020202;
+    border:solid black 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover{
+    padding: 0;
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #48ff00;
+    border:solid black 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   
   .contenedor-secciones {
     background-color: #eee; /* color gris de fondo */
     padding: 20px; /* espacio de relleno para separar del borde */
   }
+
+  li{
+    border: 1px solid black;
+    border-radius: 10px;
+    line-height: normal;
+  }
   
 
-  #botonpdf{
-  padding: 12px 25px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-  border:solid black 10px;
-  background-color: #fefefe;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  }
 
     #modalidad {
-    background-color: #fff;
+    background-color: #757272;
     padding: 50px;
     text-align: center;
+    color: white;
     }
     
     #modalidad h2 {
@@ -246,7 +283,7 @@ th, td {
 
 th {
   font-weight: bold;
-  color: #fff;
+  color: #000000;
   background-color: #f9c60f;
   border-color: #000000;
 }
@@ -260,7 +297,7 @@ th {
 .tabla-precios td:last-child {
   font-weight: bold;
   width: 30%;
-  color: #fff;
+  color: #000000;
   background-color: #f9c60f;
   cursor: pointer;
   border-left: 2px solid #000000;
@@ -273,7 +310,7 @@ th {
 .tabla-horarios td:first-child {
   font-weight: bold;
   width: 30%;
-  color: #fff;
+  color: #000000;
   background-color:#f9c60f;
   border-right: 2px solid #000000;
 }
@@ -293,7 +330,7 @@ th {
 }
 
 #precios h2 {
-  color: #fff;
+  color: #000000;
   background-color: #f9c60f;
   text-align: center;
   padding: 10px;
@@ -302,11 +339,11 @@ th {
 
 
 #horarios h2 {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 #precios h2 {
-  color: #fff;
+  color: #000000;
   background-color: #f9c60f;
   text-align: center;
   padding: 10px;
@@ -315,6 +352,7 @@ th {
 
 
     footer {
+        font-family: Arial, Helvetica, sans-serif;
         background-color: #000000;
         color: #fff;
         text-align: center;
@@ -323,7 +361,7 @@ th {
         }
         
         #contact {
-            background-color: #f5f5f5;
+            background-color: #F2F2F2;
             padding: 50px;
             text-align: center;
           }
@@ -359,10 +397,158 @@ th {
           #contact button:hover {
             background-color: #008e76;
           }
+
+          .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4);
+          }
+          
+          .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+          }
+          
+          .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
           
           #precios li::after {
             content: ":";
             color: #0077FF;
             margin-right: 5px;
           }
+                    
+
+
+          .accordion {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
           
+          .accordion li {
+            margin-bottom: 10px;
+          }
+          
+          .accordion-header {
+            cursor: pointer;
+            background-color: #eee;
+            padding: 15px;
+          }
+          
+          .accordion-header:hover {
+            background-color: #ccc;
+          }
+          
+          .accordion-header.active {
+            background-color: #ccc;
+          }
+          
+          .accordion-content {
+            display: none;
+            background-color: #fff;
+            padding: 15px;
+          }
+          
+          .accordion-content.show {
+            display: block;
+          }
+          
+          #preguntas{
+            margin-top: 40px;
+            background-color: #757272;
+            padding: 40px;
+          }
+
+          #preguntas h2{
+            margin-bottom: 20px;
+            color: white;
+          }
+
+          .modal-container {
+            display: none; /* ocultar el modal por defecto */
+            position: fixed; /* posición fija en la ventana */
+            z-index: 1; /* colocar el modal encima del resto de elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* permitir el desplazamiento vertical */
+            background-color: rgba(0, 0, 0, 0.5); /* fondo negro semitransparente */
+          }
+          
+          .modal-content {
+            background-color: #fefefe; /* fondo blanco */
+            margin: 10% auto; /* centrar verticalmente y dejar un margen del 10% */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            position: relative; /* posicionar los elementos hijos de forma relativa a este contenedor */
+          }
+          
+          .close-button {
+            position: absolute; /* posicionar el botón cerrar de forma absoluta al contenedor */
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          
+          form label {
+            display: block; /* colocar los labels en una línea separada */
+            margin-top: 10px;
+          }
+          
+          form input[type="text"],
+          form input[type="email"],
+          form textarea {
+            width: 100%; /* ajustar el ancho al 100% */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+          }
+          
+          form button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+          }
+          
+          footer h3{
+            font-size: 15px;
+            margin: 0px;
+            padding: none;
+            line-height: 30px;
+            text-align: right;
+            margin-right: 3px;
+          }
